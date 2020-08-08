@@ -1,0 +1,128 @@
+#footer
+  background-color: #4d4d4d
+  color: #ffffff
+  text-align: center
+  overflow: hidden
+  .term-and-conditions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    height: 40px
+    // background: gray
+    a
+      padding: 10px
+  .footer-social
+    display: flex
+    justify-content: center
+
+    a
+      margin: 0 30px 0 30px
+      font-family: 'FontAwesome'
+
+  li
+    list-style: none
+  a
+    color: #ffffff
+
+
+  .grid
+    display: -ms-grid
+    display: grid
+    grid-gap: 2em
+    -ms-grid-columns: 30% 30% 30%
+    -ms-grid-rows: 70px 70px
+    grid-template-columns: repeat(3, auto)
+    padding-left: 10%
+    padding-right: 10%
+    .gcell
+      border-radius: 5px
+      padding: 5px
+      font-size: 20px
+      width: 80px
+      margin: auto
+      a
+        font-size: 16px
+
+
+    .gcell:nth-child(1)
+      -ms-grid-row: 1
+      -ms-grid-column: 1
+
+    .gcell:nth-child(2)
+      -ms-grid-row: 1
+      -ms-grid-column: 3
+
+    .gcell:nth-child(3)
+      -ms-grid-row: 1
+      -ms-grid-column: 5
+
+
+    @media only screen and (max-width: 400px)
+      padding: 0
+    @media only screen and (max-width: 850px)
+      padding-left: 5%
+      padding-right: 5%
+    @media only screen and (max-width: 700px)
+      grid-template-columns: repeat(3, auto)
+      margin: 0em 0em
+      grid-gap: 2px
+      -ms-grid-columns: 33% 33% 3%
+      -ms-grid-rows: 50px 50px
+      padding: 0
+      .gcell
+        border-radius: 5px
+        padding: 10px
+        font-size: 20px
+        // width: 100px
+
+        a
+          font-size: 14px
+          @media only screen and (max-width: 320px)
+            font-size: 10px
+      .gcell:nth-child(1)
+        -ms-grid-row: 1
+        -ms-grid-column: 1
+
+      .gcell:nth-child(2)
+        -ms-grid-row: 1
+        -ms-grid-column: 3
+
+      .gcell:nth-child(3)
+        -ms-grid-row: 1
+        -ms-grid-column: 5
+
+
+
+  @media only screen and (max-width: 330px)
+    grid-gap: 0
+    -ms-grid-columns: 25% 25% 25%
+    -ms-grid-rows: 50px 50px
+
+    .gcell
+      border-radius: 5px
+      padding: 0px
+      font-size: 14px
+      width: 10px
+
+      a
+        font-size: 12px
+        width: 20px
+        padding: 0
+
+  .footer-logo img
+    max-width: 15%
+    margin-bottom: 2em
+    margin-top: 2em
+
+  .fa
+    padding: 20px 3px 20px 3px
+    font-size: 24px
+    width: 20px
+    text-align: center
+    text-decoration: none
+    margin: 5px 5px
+
+
+  .fa:hover
+    opacity: 0.7

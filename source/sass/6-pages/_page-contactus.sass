@@ -1,0 +1,134 @@
+#contactus-section
+  //background: url("../img/contact.jpg") no-repeat
+  background-color: #f9f9f9
+  background-size: cover
+  height: 900px
+
+  @media only screen and (max-width: 700px)
+    margin-top: 50px
+    // height: 1000px
+
+
+  .response-container
+    display: none
+    p
+      font-size: xx-large
+      color: #167b16
+      padding: 10px
+
+
+  .dori-contactus
+    display: flex
+    margin-top: 10%
+    &:lang(en)
+      flex-direction: row
+    &:lang(ar)
+      flex-direction: row-reverse
+
+    @media only screen and (max-width: 700px)
+      flex-direction: column
+      text-align: center
+      margin-left: auto
+      margin-right: auto
+      &:lang(ar)
+        flex-direction: column
+      &:lang(en)
+        flex-direction: column
+
+    .contactus-header
+      text-align: left
+      width: 40%
+      font-family: 'Roboto'
+      margin: 0 auto
+      color: #00ae42
+
+      @media only screen and (max-width: 700px)
+        width: 100%
+        margin: 0 auto
+        text-align: center
+
+      h1
+        color: #00ae42
+        font-size: xxx-large
+
+        @media only screen and (max-width: 700px)
+          font-size: x-large
+      p
+        font-size: x-large
+        padding: 5%
+        @media only screen and (max-width: 700px)
+          font-size: large
+
+      h1, h2, p
+        &:lang(ar)
+          text-align: right
+        @media only screen and (max-width: 700px)
+          &:lang(ar)
+            text-align: center
+          &:lang(en)
+            text-align: center
+
+    .contactus-form
+      width: 45%
+      min-width: 200px
+      margin: 0 auto
+      border: 1px solid #bed0bf
+      box-shadow: 0 12px 10px -10px rgba(0,0,0,0.2)
+      background-color: #ffffff
+      border-radius: 10px
+      text-align: center
+
+      @media only screen and (max-width: 700px)
+        width: 90%
+
+
+      h2
+        color: #00ae42
+        font-size: xx-large
+        text-shadow: -2 -2px 5px #000000
+        @media only screen and (max-width: 700px)
+          font-size: large
+
+      form
+        display: flex
+        flex-direction: column
+        padding-left: 30px
+        padding-right: 30px
+        text-align: left
+        max-width: 500px
+        margin: 0 auto
+
+        input, textarea
+          padding: 4px
+          border-radius: 4px
+          border: 1px solid #efefef
+          margin-bottom: 15px
+
+        input
+          height: 40px
+        .message-text
+          height: 80px
+          text-m
+        label
+          height: 30px
+
+        input, textarea, label
+          &:lang(ar)
+            text-align: right
+        input.warning, textarea.warning
+          border: 2px solid #ff0000
+        .submit-button
+          height: 60px
+          padding: 0
+          color: #fff
+          background-color: #00ae42
+          margin-bottom: 30px
+          border-radius: 10px
+          border: 0
+          text-align: center
+          align-items: center
+          width: 80%
+          margin: 20px auto 30px auto
+          min-width: 100px
+          &:lang(ar)
+            text-align: center

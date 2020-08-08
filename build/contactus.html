@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar"  dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Dori" content="&nbsp;"/>
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+    <link rel="shortcut icon" href="./assets/img/logo1.png" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./assets/js/vendors.js"></script>
+
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=put 6LcWaKwZAAAAAIONYZTKZhJOmsr4qX_8groCS3LJ"></script> -->
+  </head>
+  <body>
+
+    <section id="contactus-section">
+      <div class="wrapper">
+        <div class="dori-contactus">
+          <div class="contactus-header">
+            <h1 id="lang-contacttitle">Contact Us</h1>
+            <p id="lang-contacsubtitle">We are always ready to answer your mails. If you have a question, inquiry, then please feel free to use
+              the form below to drop us an email.</p>
+          </div>
+          <div id="responsecontainer" class="response-container">
+            <p id="responsemessage"></p>
+          </div>
+          <div id="formcontainer" class="contactus-form">
+            <h2 id="lang-contactfrmtitle">Drop us a message!</h2>
+            <form id="frmcontactus" action="" method="POST">
+              <label id="lang-contactname" for="">Full Name</label>
+              <input type="text" class="x" id="2005620554" name="" value="">
+              <label id="lang-contactinfo" for="">Contactinfo</label>
+              <input type="text" id="1045781291" name=""  value="">
+              <label id="lang-contactsubject" for="">Subject</label>
+              <input type="text" id="1065046570" name=""  value="">
+              <label id="lang-contactmsg" for="">Message</label>
+              <textarea id="1166974658" name="" rows="3" cols="80"></textarea>
+              <!-- <button type="submit" name="button">Send</button> -->
+              <input class="submit-button" type="submit" id="lang-contactsubmitButton"  name="submitButton" value="Send">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/app.js"></script>
+
+    <script type='text/javascript'>
+      $("#frmcontactus").submit(function(event) {
+        event.preventDefault();
+      /* get the action attribute from the <form action=""> element */
+        var $form = $( this ),
+        url = $form.attr( 'action' );
+        //Full name
+        var name = $.trim($('#2005620554').val());
+        if(!name || name ==="")
+        {
+          $('#2005620554').addClass('warning');
+          return;
+        } else {
+          $('#2005620554').removeClass('warning');
+        }
+        //contact info
+        var contactinfo = $.trim($('#1045781291').val());
+        if(!contactinfo || contactinfo ==="")
+        {
+          $('#1045781291').addClass('warning');
+          return;
+        } else {
+          $('#1045781291').removeClass('warning');
+        }
+        //subject
+        var subject = $.trim($('#1065046570').val());
+        if(!subject || subject ==="")
+        {
+          $('#1065046570').addClass('warning');
+          return;
+        } else {
+          $('#1065046570').removeClass('warning');
+        }
+        //message
+        var message = $.trim($('#1166974658').val());
+        if(!message || message ==="")
+        {
+          $('#1166974658').addClass('warning');
+          return;
+        } else {
+          $('#1166974658').removeClass('warning');
+        }
+        // a script to validate email address
+        // if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contactinfo))
+        // {
+        //   // alert('valid email');
+        // } else {
+        //   // alert("You have entered an invalid email address!");
+        //   // return;
+        // }
+        //make sure that fileds are not empty
+        $.post( url, { 'entry.2005620554':name, 'entry.1045781291': contactinfo, 'entry.1065046570': subject, 'entry.1166974658': message  });
+      /* Alerts the results */
+      // posting.done(function( data ) {
+        //   alert('success');
+        // });
+      });
+    </script>
+  </body>
+</html>

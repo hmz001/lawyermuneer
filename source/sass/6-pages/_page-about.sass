@@ -1,0 +1,99 @@
+#about-section
+  //background: url("../img/notebook.jpg") no-repeat
+  background-color: #f9f9f9
+  background-size: cover
+  height: 350px
+
+  .about-header
+    padding: 30px
+    margin-top: 70px
+    text-align: center
+
+  color: #00ae42
+  font-family: 'Roboto'
+  
+
+  h1
+    color: #00ae42
+    font-size: xx-large
+  p
+    font-size: large
+
+
+.our-team
+  text-align: center
+  font-family: 'Roboto'
+  // padding-left: 10px
+
+  h2
+    font-size: x-large
+
+  h3
+    font-size: large
+    text-align: left
+  .team-cards
+    // background-color: green
+    padding: 0
+    margin: auto
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    grid-gap: 10px
+
+    @media only screen and (max-width: 700px)
+      grid-template-columns: repeat(1, auto)
+      width: 90%
+
+    .card
+      padding: 0 5px 0 5px
+      max-width: 300px
+      list-style: none
+      border: 1px solid #f0f0f0
+      box-shadow: 3px 5px 8px #f0f0f0
+      margin: 0 auto
+      @media only screen and (max-width: 700px)
+        // width: 80%
+        max-width: 90%
+    .card img
+      width: 100%
+      padding: 5px
+      margin: auto
+
+    .employee-details
+      text-align: left
+      padding: 0
+      margin: 0
+
+      .jobtitle
+        color: #d6cece
+      p
+        padding: 1px
+        margin: 0 0 4px 0
+
+.vision-mission
+  // border: 1px solid black
+  padding: 10px
+  margin: 20px 10px 10px 10px
+
+  box-shadow: 5px 5px 10px #ede8e4
+  display: flex
+  flex-direction: column
+  border: 1px solid #efefef
+  @media only screen and (max-width: 700PX)
+    text-align: center
+
+  .card
+    text-align: left
+    font-family: 'Roboto'
+    @media only screen and (max-width: 700PX)
+      text-align: center
+
+    h2
+      font-size: xx-large
+      text-align: left
+    p
+      font-size: large
+    img
+      padding: 10px
+      width: 150px
+      height: 80px
+      margin-left: 0

@@ -1,0 +1,148 @@
+
+nav
+  height: 70px
+  // background-color: #00ae42
+  padding-top: 20px
+  z-index: 100
+  width: 100%
+  position: relative
+
+  .nav-container
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    padding-right: 10%
+    padding-left: 10%
+  .nav-links
+    display: flex
+    flex-direction: row
+    list-style: none
+    width: 100%
+    height: 100%
+    justify-content: space-around
+    align-items: center
+    margin-top: 0
+
+  
+
+    @media only screen and (min-width: 1100px)
+      margin-right: 0
+
+    &:lang(ar)
+      font-family: 'Cairo', sans-serif
+
+    .nav-link:hover
+      a
+        box-shadow: 0px 3px #000
+    li
+      &:first-child
+        margin-right: auto
+      a
+        text-decoration: none
+        color: #fff
+        font-family: "Roboto"
+        font-size: 18px
+        text-transform: capitalize
+        padding: 0 10px 0 10px
+        white-space: nowrap
+        pointer-events: all
+
+        &:lang(en)
+          font-family: 'Roboto'
+        &:lang(ar)
+          font-family: 'Cairo', sans-serif
+
+
+    .nav-social
+      display: flex
+      a
+        font-family: 'FontAwesome'
+        padding: 0 5px 0 5px
+        &:lang(en)
+          font-family: 'FontAwesome'
+        &:lang(ar)
+          font-family: 'FontAwesome'
+
+    .nav-lang a
+      &:lang(en)
+        font-family: 'Cairo', sans-serif
+      &:lang(ar)
+        font-family: 'Roboto', sans-serif
+
+
+
+
+
+  @media only screen and (max-width: 700px)
+    //position: fixed
+    height: 50px
+    top: 0
+    .line
+      width: 25px
+      height: 3px
+      background-color: #fff
+      margin: 4px
+
+
+
+    .hamburger
+      position: absolute
+      cursor: pointer
+      top: 25px
+      transform: translate(-5%, -50%)
+      transition: all 0.9s ease
+      z-index: 400
+      &:lang(en)
+        left: 5%
+      &:lang(ar)
+        right: 5%
+    .hamburger-logo
+      display: block
+
+
+    .unfold
+      .line1
+        transform: rotate(-45deg) translate(-5px, 5px)
+      .line2
+        opacity: 0
+      .line3
+        transform: rotate(45deg) translate(-5px, -5px)
+    .nav-links
+      background-color: #1169ba
+      opacity: .9
+      position: fixed
+      height: 100vh
+      width: 60%
+      z-index: 200
+      top: 0
+      padding-bottom: 25%
+      padding-top: 70px
+      align-items: flex-start
+      @media only screen and (max-width: 310px)
+        width: 100%
+
+      &:lang(en)
+        // align-items: baseline
+        flex-direction: column
+        left: -100%
+        transition: left 0.5s
+      &:lang(ar)
+        // align-items: flex-end
+        flex-direction: column
+        right: -100%
+        transition: right 0.5s
+
+
+
+    .nav-links.unfold
+      margin-top: 0px
+      position: absolute
+      padding-top: 50px
+      &:lang(en)
+        padding-left: 50px
+        left: 0
+        transition: left 0.5s
+      &:lang(ar)
+        padding-right: 50px
+        right: 0
+        transition: right 0.5s
