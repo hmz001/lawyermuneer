@@ -1,0 +1,53 @@
+#features
+  background: #ffffff
+  text-align: center
+  position: relative
+  padding: 2px
+  margin: 5px
+
+  h2
+    margin: 20px 0
+  h2, h3, h4
+    &:lang(ar)
+      //font-family: 'Almarai', sans-serif
+      font-family: 'Cairo', sans-serif
+
+  .cards
+    // display: grid
+    display: flex
+    flex-wrap: wrap
+    // grid-template-columns: repeat(2, auto)
+    justify-content: center
+    margin-bottom: 50px
+    box-shadow: 0px 0px 10px #f6f6f0
+    grid-gap: 10px
+
+    @media only screen and (max-width: 700px)
+      // grid-template-columns: repeat(1, auto)
+      //flex-direction: column
+    div
+      flex: 0 48%
+    .feature-card
+      width: 100%
+      background: #ffffff
+      padding: 0
+      padding-left: 3px
+      padding-right: 3px
+      @media only screen and (max-width: 700px)
+        width: 90%
+        // margin: auto
+      .small-img img
+        width: 35%
+      .animation-img
+        width: 50%
+        // margin-top: -30px
+      h4
+        padding: 35px
+
+      img
+        width: 100%
+
+      lottie-player
+        width: 150px
+        height: 150px
+        margin: 25px auto
