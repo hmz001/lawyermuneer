@@ -7,18 +7,18 @@ function initialLanguageCheck() {
   //If the cookie is not saved it'll save a new cookie and update the language attribute
   var language = getCookie('langCookie');
 
-  if(language === 'en') {
-    createCookie('langCookie', 'en', 100);
-    document.documentElement.setAttribute('lang', "en");
-    document.documentElement.setAttribute('dir', "ltr");
-    replaceText(1);
-  } else {
+  // if(language === 'en') {
+  //   createCookie('langCookie', 'en', 100);
+  //   document.documentElement.setAttribute('lang', "en");
+  //   document.documentElement.setAttribute('dir', "ltr");
+  //   replaceText(1);
+  // } else {
     createCookie('langCookie', 'ar', 100);
     document.documentElement.setAttribute('lang', "ar");
     document.documentElement.setAttribute('dir', "rtl");
 
     replaceText(2);
-  }
+  // }
 }
 function setLoading(visible) {
   if(visible) {

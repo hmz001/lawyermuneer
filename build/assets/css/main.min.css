@@ -360,11 +360,13 @@ nav {
       font-family: 'Cairo', sans-serif; }
     nav .nav-links .nav-link:hover a {
       box-shadow: 0px 3px #000; }
-    nav .nav-links li:first-child {
+    nav .nav-links li:first-child:lang(ar) {
+      margin-left: auto; }
+    nav .nav-links li:first-child:lang(en) {
       margin-right: auto; }
     nav .nav-links li a {
       text-decoration: none;
-      color: #fff;
+      color: #000;
       font-family: "Roboto";
       font-size: 18px;
       text-transform: capitalize;
@@ -395,7 +397,7 @@ nav {
       nav .line {
         width: 25px;
         height: 3px;
-        background-color: #fff;
+        background-color: #000;
         margin: 4px; }
       nav .hamburger {
         position: absolute;
@@ -417,7 +419,7 @@ nav {
       nav .unfold .line3 {
         transform: rotate(45deg) translate(-5px, -5px); }
       nav .nav-links {
-        background-color: #1169ba;
+        background-color: #fefefe;
         opacity: .9;
         position: fixed;
         height: 100vh;
@@ -560,31 +562,11 @@ nav {
   #footer a {
     color: #ffffff; }
   #footer .grid {
-    display: -ms-grid;
     display: grid;
     grid-gap: 2em;
-    -ms-grid-columns: 30% 30% 30%;
-    -ms-grid-rows: 70px 70px;
     grid-template-columns: repeat(3, auto);
     padding-left: 10%;
     padding-right: 10%; }
-    #footer .grid .gcell {
-      border-radius: 5px;
-      padding: 5px;
-      font-size: 20px;
-      width: 80px;
-      margin: auto; }
-      #footer .grid .gcell a {
-        font-size: 16px; }
-    #footer .grid .gcell:nth-child(1) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 1; }
-    #footer .grid .gcell:nth-child(2) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 3; }
-    #footer .grid .gcell:nth-child(3) {
-      -ms-grid-row: 1;
-      -ms-grid-column: 5; }
     @media only screen and (max-width: 400px) {
       #footer .grid {
         padding: 0; } }
@@ -721,6 +703,27 @@ nav {
       height: 50px;
       width: 100%; }
 
+#introduction .into-header {
+  text-align: center;
+  padding: 30px; }
+  #introduction .into-header #header-logo {
+    width: 100px; }
+
+#introduction .lawyer p {
+  font-size: 18px; }
+
+#introduction .assosiation {
+  padding: 20px;
+  background-color: #f6f6f6; }
+  #introduction .assosiation p {
+    font-size: 20px; }
+
+#introduction .lawyer img {
+  width: 70%; }
+  @media only screen and (max-width: 700px) {
+    #introduction .lawyer img {
+      width: 100%; } }
+
 .flex-video {
   height: 0;
   margin-bottom: 0.88889rem;
@@ -800,7 +803,7 @@ nav {
   @media only screen and (max-width: 700px) {
     .hamburger-logo img {
       display: block;
-      right: 5%;
+      left: 5%;
       position: absolute; } }
 
 .logo {
@@ -809,38 +812,40 @@ nav {
     width: 90px; }
 
 #header {
-  background: url("../img/banner1x.jpg") no-repeat;
-  height: 360px;
+  background: url("../img/bannar4.jpg") no-repeat;
+  height: 800px;
   background-size: cover; }
   @media only screen and (min-width: 1100px) {
     #header {
-      height: 450px; } }
+      height: 800px; } }
   @media only screen and (max-width: 700px) {
     #header {
+      background: #f2ebe1;
       height: 230px;
       display: block;
       background-size: cover; } }
   #header .header-contents {
     position: relative;
     display: flex;
-    flex-direction: row; }
+    flex-direction: row-reverse; }
     @media only screen and (max-width: 700px) {
       #header .header-contents {
         flex-direction: column;
         display: block;
         text-align: center; } }
+    #header .header-contents P {
+      font-size: 18px;
+      text-align: center;
+      margin-top: -15px; }
     #header .header-contents h1 {
-      max-width: 50%;
+      max-width: 100%;
       font-weight: normal;
-      color: #ffffff;
+      color: #000;
       font-size: 34px;
       height: 100%;
-      padding: 50px 40px 0px 40px; }
-      @media only screen and (min-width: 1100px) {
-        #header .header-contents h1:lang(en) {
-          margin-left: 5%; }
-        #header .header-contents h1:lang(ar) {
-          margin-right: 5%; } }
+      padding: 100px 30px 0px 30px;
+      margin-bottom: 0;
+      padding-bottom: 0; }
       @media only screen and (max-width: 700px) {
         #header .header-contents h1 {
           max-width: 70%;
@@ -894,14 +899,14 @@ nav {
   background-color: #f9f9f9;
   background-size: cover;
   height: 350px;
-  color: #00ae42;
+  color: #c3ad55;
   font-family: 'Roboto'; }
   #about-section .about-header {
     padding: 30px;
     margin-top: 70px;
     text-align: center; }
   #about-section h1 {
-    color: #00ae42;
+    color: #c3ad55;
     font-size: xx-large; }
   #about-section p {
     font-size: large; }
@@ -979,63 +984,60 @@ nav {
   background-color: #f9f9f9;
   background-size: cover;
   height: 900px; }
-  @media only screen and (max-width: 700px) {
-    #contactus-section {
-      margin-top: 50px; } }
   #contactus-section .response-container {
     display: none; }
     #contactus-section .response-container p {
       font-size: xx-large;
-      color: #167b16;
+      color: #c3ad55;
       padding: 10px; }
-  #contactus-section .dori-contactus {
+  #contactus-section .contactus {
     display: flex;
     margin-top: 10%; }
-    #contactus-section .dori-contactus:lang(en) {
+    #contactus-section .contactus:lang(en) {
       flex-direction: row; }
-    #contactus-section .dori-contactus:lang(ar) {
+    #contactus-section .contactus:lang(ar) {
       flex-direction: row-reverse; }
     @media only screen and (max-width: 700px) {
-      #contactus-section .dori-contactus {
+      #contactus-section .contactus {
         flex-direction: column;
         text-align: center;
         margin-left: auto;
         margin-right: auto; }
-        #contactus-section .dori-contactus:lang(ar) {
+        #contactus-section .contactus:lang(ar) {
           flex-direction: column; }
-        #contactus-section .dori-contactus:lang(en) {
+        #contactus-section .contactus:lang(en) {
           flex-direction: column; } }
-    #contactus-section .dori-contactus .contactus-header {
+    #contactus-section .contactus .contactus-header {
       text-align: left;
       width: 40%;
       font-family: 'Roboto';
       margin: 0 auto;
-      color: #00ae42; }
+      color: #c3ad55; }
       @media only screen and (max-width: 700px) {
-        #contactus-section .dori-contactus .contactus-header {
+        #contactus-section .contactus .contactus-header {
           width: 100%;
           margin: 0 auto;
           text-align: center; } }
-      #contactus-section .dori-contactus .contactus-header h1 {
-        color: #00ae42;
+      #contactus-section .contactus .contactus-header h1 {
+        color: #c3ad55;
         font-size: xxx-large; }
         @media only screen and (max-width: 700px) {
-          #contactus-section .dori-contactus .contactus-header h1 {
+          #contactus-section .contactus .contactus-header h1 {
             font-size: x-large; } }
-      #contactus-section .dori-contactus .contactus-header p {
+      #contactus-section .contactus .contactus-header p {
         font-size: x-large;
         padding: 5%; }
         @media only screen and (max-width: 700px) {
-          #contactus-section .dori-contactus .contactus-header p {
+          #contactus-section .contactus .contactus-header p {
             font-size: large; } }
-      #contactus-section .dori-contactus .contactus-header h1:lang(ar), #contactus-section .dori-contactus .contactus-header h2:lang(ar), #contactus-section .dori-contactus .contactus-header p:lang(ar) {
+      #contactus-section .contactus .contactus-header h1:lang(ar), #contactus-section .contactus .contactus-header h2:lang(ar), #contactus-section .contactus .contactus-header p:lang(ar) {
         text-align: right; }
       @media only screen and (max-width: 700px) {
-        #contactus-section .dori-contactus .contactus-header h1:lang(ar), #contactus-section .dori-contactus .contactus-header h2:lang(ar), #contactus-section .dori-contactus .contactus-header p:lang(ar) {
+        #contactus-section .contactus .contactus-header h1:lang(ar), #contactus-section .contactus .contactus-header h2:lang(ar), #contactus-section .contactus .contactus-header p:lang(ar) {
           text-align: center; }
-        #contactus-section .dori-contactus .contactus-header h1:lang(en), #contactus-section .dori-contactus .contactus-header h2:lang(en), #contactus-section .dori-contactus .contactus-header p:lang(en) {
+        #contactus-section .contactus .contactus-header h1:lang(en), #contactus-section .contactus .contactus-header h2:lang(en), #contactus-section .contactus .contactus-header p:lang(en) {
           text-align: center; } }
-    #contactus-section .dori-contactus .contactus-form {
+    #contactus-section .contactus .contactus-form {
       width: 45%;
       min-width: 200px;
       margin: 0 auto;
@@ -1045,16 +1047,16 @@ nav {
       border-radius: 10px;
       text-align: center; }
       @media only screen and (max-width: 700px) {
-        #contactus-section .dori-contactus .contactus-form {
+        #contactus-section .contactus .contactus-form {
           width: 90%; } }
-      #contactus-section .dori-contactus .contactus-form h2 {
-        color: #00ae42;
+      #contactus-section .contactus .contactus-form h2 {
+        color: #c3ad55;
         font-size: xx-large;
         text-shadow: -2 -2px 5px #000000; }
         @media only screen and (max-width: 700px) {
-          #contactus-section .dori-contactus .contactus-form h2 {
+          #contactus-section .contactus .contactus-form h2 {
             font-size: large; } }
-      #contactus-section .dori-contactus .contactus-form form {
+      #contactus-section .contactus .contactus-form form {
         display: flex;
         flex-direction: column;
         padding-left: 30px;
@@ -1062,26 +1064,26 @@ nav {
         text-align: left;
         max-width: 500px;
         margin: 0 auto; }
-        #contactus-section .dori-contactus .contactus-form form input, #contactus-section .dori-contactus .contactus-form form textarea {
+        #contactus-section .contactus .contactus-form form input, #contactus-section .contactus .contactus-form form textarea {
           padding: 4px;
           border-radius: 4px;
           border: 1px solid #efefef;
           margin-bottom: 15px; }
-        #contactus-section .dori-contactus .contactus-form form input {
+        #contactus-section .contactus .contactus-form form input {
           height: 40px; }
-        #contactus-section .dori-contactus .contactus-form form .message-text {
+        #contactus-section .contactus .contactus-form form .message-text {
           height: 80px; }
-        #contactus-section .dori-contactus .contactus-form form label {
+        #contactus-section .contactus .contactus-form form label {
           height: 30px; }
-        #contactus-section .dori-contactus .contactus-form form input:lang(ar), #contactus-section .dori-contactus .contactus-form form textarea:lang(ar), #contactus-section .dori-contactus .contactus-form form label:lang(ar) {
+        #contactus-section .contactus .contactus-form form input:lang(ar), #contactus-section .contactus .contactus-form form textarea:lang(ar), #contactus-section .contactus .contactus-form form label:lang(ar) {
           text-align: right; }
-        #contactus-section .dori-contactus .contactus-form form input.warning, #contactus-section .dori-contactus .contactus-form form textarea.warning {
+        #contactus-section .contactus .contactus-form form input.warning, #contactus-section .contactus .contactus-form form textarea.warning {
           border: 2px solid #ff0000; }
-        #contactus-section .dori-contactus .contactus-form form .submit-button {
+        #contactus-section .contactus .contactus-form form .submit-button {
           height: 60px;
           padding: 0;
           color: #fff;
-          background-color: #00ae42;
+          background-color: #c3ad55;
           margin-bottom: 30px;
           border-radius: 10px;
           border: 0;
@@ -1090,7 +1092,7 @@ nav {
           width: 80%;
           margin: 20px auto 30px auto;
           min-width: 100px; }
-          #contactus-section .dori-contactus .contactus-form form .submit-button:lang(ar) {
+          #contactus-section .contactus .contactus-form form .submit-button:lang(ar) {
             text-align: center; }
 
 #privacy, #privacy-ar {

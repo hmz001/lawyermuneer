@@ -23,7 +23,7 @@ nav
     align-items: center
     margin-top: 0
 
-  
+
 
     @media only screen and (min-width: 1100px)
       margin-right: 0
@@ -36,10 +36,13 @@ nav
         box-shadow: 0px 3px #000
     li
       &:first-child
-        margin-right: auto
+        &:lang(ar)
+          margin-left: auto
+        &:lang(en)
+          margin-right: auto
       a
         text-decoration: none
-        color: #fff
+        color: #000
         font-family: "Roboto"
         font-size: 18px
         text-transform: capitalize
@@ -80,7 +83,7 @@ nav
     .line
       width: 25px
       height: 3px
-      background-color: #fff
+      background-color: #000
       margin: 4px
 
 
@@ -108,7 +111,7 @@ nav
       .line3
         transform: rotate(45deg) translate(-5px, -5px)
     .nav-links
-      background-color: #1169ba
+      background-color: #fefefe
       opacity: .9
       position: fixed
       height: 100vh
